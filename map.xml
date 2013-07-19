@@ -1,0 +1,77 @@
+<krpano version="1.0.8.14" ispartialpano="true">
+	
+	
+	
+	<include url="skin/defaultskin.xml" />
+	
+	<!-- include the both plugins -->
+	<plugin name="editor" url="%SWFPATH%/plugins/editor.swf" keep="true" />
+	<plugin name="options" url="%SWFPATH%/plugins/options.swf" keep="true" />
+	
+	<!-- set the path to the default lensflare image -->
+	<lensflareset name="DEFAULT" url="%SWFPATH%/plugins/krpano_default_flares.jpg" />
+	
+	<!---------------------------------------------------------- FONTS -->
+	
+    <textstyle name="DEFAULT" background="true" bold="false" border="true" effect="dropshadow(0,45,0xffffff,4,2);" font="Arial" fontsize="14" italic="false" textcolor="0x000000"/>
+	
+	<textstyle name="infostyle"
+	   origin="center" edge="center" yoffset="-39" textalign="center" background="false" border="false" font="Calibri"
+	   fontsize="40" textcolor="0xFFFFFF" bold="false" effect="glow(0xFFFFFF,0.7,4,2);glow(0x000000,1,4,2);dropshadow(3,45,0x000000,2,0.6);"
+	   showtime="3.0" fadeintime="0.5" fadetime="0.5"
+	   />
+
+	<view hlookat="0" vlookat="0" maxpixelzoom="1.0" limitview="auto" />
+
+   <panoview h="0" v="0" fov="0.507325"/>
+    <!--parametry widoku-->
+    <view fisheye="0" limitview="range" hlookatmin="-0.5" hlookatmax="0.5" vlookatmin="-0.253662" vlookatmax="0.253662" fovmin="1" fov="0.507325" hlookat="0" vlookat="0"/>
+
+    <!--aktualnej panoramy-->
+    <image type="SPHERE" hfov="1" vfov="0.507325" voffset="0" multires="true" tilesize="797" baseindex="0">
+        <level tiledimagewidth="3140" tiledimageheight="1593">
+            <sphere url="testdata/test1/1/%v_%u.jpg"/>
+        </level>
+        <level tiledimagewidth="1570" tiledimageheight="796">
+            <sphere url="testdata/test1/0/%v_%u.jpg"/>
+        </level>
+    </image>
+
+	
+    <!--************* Hotspoty i flary **********************************************************-->
+    <hotspot name="spot6" hview="0" vview="0" fovview="0.507325" hcenter="-0.203283" vcenter="0.0968172" 
+		onclick="lookto(get(hcenter),get(vcenter),get(view.fovmin),smooth(400,20,.2));"
+	    fillcolor     ="0xff3333" fillalpha     ="0.10" borderwidth     ="1.0" bordercolor     ="0xff3333" borderalpha     ="0.80"
+	    fillcolorhover="0xff3333" fillalphahover="0.20" borderwidthhover="2.0" bordercolorhover="0xff3333" borderalphahover="0.80"		onhover="showtext('Przykładowa ofrta 6');">
+        <point ath="359.785" atv="0.0754754"/>
+        <point ath="359.783" atv="0.102712"/>
+        <point ath="359.806" atv="0.118159"/>
+        <point ath="359.81" atv="0.0756109"/>
+        <point ath="359.797" atv="0.0754754"/>
+    </hotspot>
+    <hotspot name="spot7" hview="0" vview="0" fovview="0.507325" hcenter="-0.247814" vcenter="0.00352378" 
+		onclick="lookto(get(hcenter),get(vcenter),get(view.fovmin),smooth(400,20,.2));"
+	    fillcolor     ="0xff3333" fillalpha     ="0.10" borderwidth     ="1.0" bordercolor     ="0xff3333" borderalpha     ="0.80"
+	    fillcolorhover="0xff3333" fillalphahover="0.20" borderwidthhover="2.0" bordercolorhover="0xff3333" borderalphahover="0.80"		onhover="showtext('Przykładowa ofrta 6');">
+        <point ath="359.737" atv="-0.00858611"/>
+        <point ath="359.771" atv="-0.00392082"/>
+        <point ath="359.768" atv="0.0129536"/>
+        <point ath="359.761" atv="0.012358"/>
+        <point ath="359.753" atv="0.012358"/>
+        <point ath="359.746" atv="0.0130529"/>
+        <point ath="359.737" atv="0.0148396"/>
+        <point ath="359.733" atv="0.0156337"/>
+    </hotspot>
+    <hotspot name="spot8" hview="0" vview="0" fovview="0.507325" hcenter="-0.33993" vcenter="0.00570925" 
+		onclick="lookto(get(hcenter),get(vcenter),get(view.fovmin),smooth(400,20,.2));"
+	    fillcolor     ="0xff3333" fillalpha     ="0.10" borderwidth     ="1.0" bordercolor     ="0xff3333" borderalpha     ="0.80"
+	    fillcolorhover="0xff3333" fillalphahover="0.20" borderwidthhover="2.0" bordercolorhover="0xff3333" borderalphahover="0.80"		onhover="showtext('Przykładowa ofrta 6');">
+        <point ath="359.653" atv="0.0137513"/>
+        <point ath="359.664" atv="0.0153474"/>
+        <point ath="359.667" atv="-0.000245559"/>
+        <point ath="359.666" atv="-0.000859456"/>
+        <point ath="359.656" atv="-0.00392894"/>
+        <point ath="359.655" atv="-0.00135057"/>
+    </hotspot>
+    <!--zamknij wszystkie Hotspoty-->
+	</krpano>
